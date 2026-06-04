@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f2eabc;
+  --color-slate: #54736e;
+  --color-teal: #194756;
+  --color-ink: #080000;
+  --color-coral: #ff3b58;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-coral/20 text-teal;
+  }
+}

@@ -4,23 +4,80 @@ Landing page del proyecto **SmartPark**, desarrollado por el equipo del curso **
 
 ## Descripción
 
-Sitio web de presentación del producto SmartPark: información del proyecto, beneficios, equipo y enlaces relevantes para usuarios y stakeholders.
+Sitio de presentación de SmartPark: plataforma SaaS de gestión inteligente de estacionamientos con **gemelo digital 3D** para centros comerciales.
 
-## Repositorio
+## Stack
 
-- **Organización:** [upc-pre-202601-1ASI0728-10042-smartpark](https://github.com/upc-pre-202601-1ASI0728-10042-smartpark)
-- **Remoto:** `https://github.com/upc-pre-202601-1ASI0728-10042-smartpark/landing-page.git`
+- [React](https://react.dev/) 19 + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/) 6
+- [Tailwind CSS](https://tailwindcss.com/) 4
+- [Lucide React](https://lucide.dev/) (iconos)
 
-## Estado del proyecto
+## Paleta de colores
 
-En desarrollo. La estructura y el stack de la landing se definirán en las siguientes iteraciones.
+| Token   | Hex       | Uso                          |
+|---------|-----------|------------------------------|
+| cream   | `#F2EABC` | Fondos hero, acentos suaves  |
+| slate   | `#54736E` | Texto secundario             |
+| teal    | `#194756` | Marca, títulos, footer       |
+| ink     | `#080000` | Texto principal              |
+| coral   | `#FF3B58` | CTAs y destacados            |
+
+## Estructura del proyecto
+
+```
+src/
+├── main.tsx
+├── App.tsx
+├── index.css
+├── data/
+│   └── content.ts          # Textos ES / EN
+├── hooks/
+│   └── useLanguage.ts
+└── components/
+    ├── layout/
+    │   ├── Header.tsx
+    │   └── Footer.tsx
+    ├── sections/
+    │   ├── Hero.tsx
+    │   ├── Problem.tsx
+    │   ├── OperatorFeatures.tsx
+    │   ├── DriverFeatures.tsx
+    │   ├── Pricing.tsx
+    │   └── Contact.tsx
+    └── ui/
+        ├── Button.tsx
+        ├── Logo.tsx
+        ├── SectionTitle.tsx
+        ├── FeatureCard.tsx
+        └── PricingCard.tsx
+public/
+└── logo-smartpark.png
+```
 
 ## Desarrollo local
 
 ```bash
 git clone https://github.com/upc-pre-202601-1ASI0728-10042-smartpark/landing-page.git
 cd landing-page
+npm install
+npm run dev
 ```
+
+Abre [http://localhost:5173](http://localhost:5173).
+
+## Scripts
+
+| Comando        | Descripción              |
+|----------------|--------------------------|
+| `npm run dev`  | Servidor de desarrollo   |
+| `npm run build`| Build de producción      |
+| `npm run preview` | Vista previa del build |
+
+## Repositorio
+
+- **Organización:** [upc-pre-202601-1ASI0728-10042-smartpark](https://github.com/upc-pre-202601-1ASI0728-10042-smartpark)
+- **Remoto:** `https://github.com/upc-pre-202601-1ASI0728-10042-smartpark/landing-page.git`
 
 ## Equipo
 

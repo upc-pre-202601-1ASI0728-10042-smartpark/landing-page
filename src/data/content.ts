@@ -7,6 +7,7 @@ export const content = {
       pricing: "Planes",
       contact: "Contacto",
       cta: "Solicitar demo",
+      login: "Acceder al panel",
     },
     hero: {
       title:
@@ -166,6 +167,7 @@ export const content = {
       pricing: "Plans",
       contact: "Contact",
       cta: "Request demo",
+      login: "Operator panel",
     },
     hero: {
       title:

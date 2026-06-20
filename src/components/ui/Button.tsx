@@ -6,6 +6,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
   children: ReactNode;
   fullWidth?: boolean;
+  /** Si se define, el botón se renderiza como enlace (<a href>). */
+  href?: string;
+  /** Abrir el enlace en una pestaña nueva. */
+  external?: boolean;
 }
 
 const variants: Record<Variant, string> = {
@@ -21,26 +25,36 @@ const variants: Record<Variant, string> = {
     "bg-cream text-teal hover:bg-cream/90 font-semibold",
 };
 
+const base =
+  "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-medium transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral disabled:opacity-50";
+
 export function Button({
   variant = "primary",
   children,
   fullWidth,
   className = "",
+  href,
+  external,
   ...props
 }: ButtonProps) {
+  const classes = [base, variants[variant], fullWidth ? "w-full" : "", className]
+    .filter(Boolean)
+    .join(" ");
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={classes}
+        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <button
-      type="button"
-      className={[
-        "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-medium transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral disabled:opacity-50",
-        variants[variant],
-        fullWidth ? "w-full" : "",
-        className,
-      ]
-        .filter(Boolean)
-        .join(" ")}
-      {...props}
-    >
+    <button type="button" className={classes} {...props}>
       {children}
     </button>
   );

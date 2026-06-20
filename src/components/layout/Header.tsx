@@ -3,6 +3,7 @@ import { useState } from "react";
 import type { Content, Locale } from "@/data/content";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
+import { PANEL_URL } from "@/config";
 
 interface HeaderProps {
   t: Content;
@@ -41,7 +42,10 @@ export function Header({ t, locale, onLocaleChange }: HeaderProps) {
 
         <div className="hidden items-center gap-3 md:flex">
           <LanguageToggle locale={locale} onChange={onLocaleChange} />
-          <Button variant="coral" className="!px-4 !py-2 text-sm">
+          <Button variant="outline" href={PANEL_URL} external className="!px-4 !py-2 text-sm">
+            {t.nav.login}
+          </Button>
+          <Button variant="coral" href="#contacto" className="!px-4 !py-2 text-sm">
             {t.nav.cta}
           </Button>
         </div>
@@ -71,11 +75,16 @@ export function Header({ t, locale, onLocaleChange }: HeaderProps) {
               </a>
             ))}
           </nav>
-          <div className="mt-4 flex items-center justify-between">
-            <LanguageToggle locale={locale} onChange={onLocaleChange} />
-            <Button variant="coral" className="text-sm">
+          <div className="mt-4 flex flex-col gap-2">
+            <Button variant="outline" href={PANEL_URL} external fullWidth className="text-sm">
+              {t.nav.login}
+            </Button>
+            <Button variant="coral" href="#contacto" fullWidth className="text-sm">
               {t.nav.cta}
             </Button>
+            <div className="mt-1">
+              <LanguageToggle locale={locale} onChange={onLocaleChange} />
+            </div>
           </div>
         </div>
       )}

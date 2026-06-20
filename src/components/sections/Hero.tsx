@@ -1,6 +1,7 @@
 import { Box, Download } from "lucide-react";
 import type { Content } from "@/data/content";
 import { Button } from "@/components/ui/Button";
+import { APP_URL } from "@/config";
 
 interface HeroProps {
   t: Content;
@@ -29,8 +30,8 @@ export function Hero({ t }: HeroProps) {
             {h.subtitle}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Button variant="primary">{h.ctaPrimary}</Button>
-            <Button variant="secondary">
+            <Button variant="primary" href="#contacto">{h.ctaPrimary}</Button>
+            <Button variant="secondary" href={APP_URL} external>
               <Download className="h-4 w-4" />
               {h.ctaSecondary}
             </Button>

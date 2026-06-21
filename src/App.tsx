@@ -6,6 +6,7 @@ import { Hero } from "@/components/sections/Hero";
 import { OperatorFeatures } from "@/components/sections/OperatorFeatures";
 import { Pricing } from "@/components/sections/Pricing";
 import { Problem } from "@/components/sections/Problem";
+import { VideoAboutProduct } from "@/components/sections/VideoAboutProduct";
 import { useLanguage } from "@/hooks/useLanguage";
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
         <Problem t={t} />
         <OperatorFeatures t={t} />
         <DriverFeatures t={t} />
+        <VideoAboutProduct t={t} />
         <Pricing t={t} />
         <Contact t={t} />
       </main>

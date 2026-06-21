@@ -18,6 +18,11 @@ export const content = {
       ctaSecondary: "Descargar app",
       visualLabel: "Vista del gemelo digital 3D",
     },
+    video: {
+      title: "Conoce SmartPark en acción",
+      subtitle:
+        "Un recorrido por el gemelo digital 3D, el panel del operador y las alertas de humo geolocalizadas en tiempo real.",
+    },
     problem: {
       title: "¿Qué problema resuelve?",
       items: [
@@ -177,6 +182,11 @@ export const content = {
       ctaPrimary: "Request demo",
       ctaSecondary: "Download app",
       visualLabel: "3D digital twin preview",
+    },
+    video: {
+      title: "See SmartPark in action",
+      subtitle:
+        "A walkthrough of the 3D digital twin, the operator dashboard and the real-time geolocated smoke alerts.",
     },
     problem: {
       title: "What problem does it solve?",

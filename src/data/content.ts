@@ -23,6 +23,11 @@ export const content = {
       subtitle:
         "Un recorrido por el gemelo digital 3D, el panel del operador y las alertas de humo geolocalizadas en tiempo real.",
     },
+    videoTeam: {
+      title: "Conoce al equipo Apex Twin",
+      subtitle:
+        "El proceso detrás de SmartPark: cómo trabajamos y los testimonios del equipo que lo construyó.",
+    },
     problem: {
       title: "¿Qué problema resuelve?",
       items: [
@@ -187,6 +192,11 @@ export const content = {
       title: "See SmartPark in action",
       subtitle:
         "A walkthrough of the 3D digital twin, the operator dashboard and the real-time geolocated smoke alerts.",
+    },
+    videoTeam: {
+      title: "Meet the Apex Twin team",
+      subtitle:
+        "The process behind SmartPark: how we work and the testimonies of the team that built it.",
     },
     problem: {
       title: "What problem does it solve?",
